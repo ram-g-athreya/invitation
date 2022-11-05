@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Dheepshika and Ram Wedding Invitation</title>
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="scripts/turn.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/magic.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/index.css" />
+  </head>
+  <body>
+    <div class="pages">
+      <div class="page page1">
+        <div class="white-space"></div>
+        <div class="page-content"></div>
+      </div>
+      <div class="page page2"><div class="page-content"></div></div>
+      <div class="page page3"><div class="page-content"></div></div>
+    </div>
+    <button class="prev">Previous</button>
+    <button class="next">Next</button>
+
+    <script>
+      var currentPage = 1;
+      $(".next").click(function () {
+        if (currentPage == 1) {
+          $(".page1 .page-content").addClass("magictime rotate-up");
+          $(".page1 .white-space").addClass("magictime hide");
+          $(".page2").addClass("magictime show");
+          ++currentPage;
+        } else if (currentPage == 2) {
+          $(".page2 .page-content").addClass("magictime rotate-left");
+          $(".page3").addClass("magictime show");
+          ++currentPage;
+        }
+      });
+    </script>
+  </body>
+</html>
